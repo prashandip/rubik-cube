@@ -1,0 +1,8 @@
+$x: 80px; // dimension of the cube
+div.rubik-cube {
+  background-color: pink;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 3 * $x;
+  width: 3 * $x;
+}

@@ -1,0 +1,50 @@
+$x: 80px; // dimension of the cube
+div.cube {
+  position: absolute;
+  transform-style: preserve-3d;
+  div.cube-face {
+    position: absolute;
+    height: $x - 1px;
+    width: $x - 1px;
+    border: 1px solid black;
+    // background-image: linear-gradient(135deg, white, transparent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.front {
+      background-color: blue;
+      //   background-image: linear-gradient(135deg, blue, transparent);
+      transform: rotate3d(0deg);
+    }
+    &.back {
+      background-color: green;
+      //   background-image: linear-gradient(135deg, green, transparent);
+      transform: translateZ(-80px);
+    }
+    &.left {
+      background-color: red;
+      //   background-image: linear-gradient(135deg, red, transparent);
+      transform-origin: left;
+      transform: rotateY(90deg);
+    }
+    &.right {
+      background-color: orange;
+      //   background-image: linear-gradient(135deg, orange, transparent);
+      transform-origin: right;
+      transform: rotateY(-90deg);
+    }
+    &.top {
+      background-color: yellow;
+      //   background-image: linear-gradient(135deg, yellow, transparent);
+      transform-origin: top;
+      transform: rotateX(-90deg);
+    }
+    &.bottom {
+      background-color: white;
+      //   background-image: linear-gradient(135deg, white, transparent);
+      transform-origin: bottom;
+      transform: rotateX(90deg);
+    }
+  }
+}
